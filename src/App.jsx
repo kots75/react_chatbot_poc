@@ -1,29 +1,30 @@
-import React, { useState } from 'react';
-import './App.css'; 
+import React, { useState } from "react";
+import "./App.css";
 
-// Main App component
 function App() {
-  // State to manage the visibility of the sidebar
   const [isSidebarVisible, setSidebarVisible] = useState(false);
 
-  // Function to toggle the sidebar visibility
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
   return (
-    <div className={`app ${isSidebarVisible ? 'sidebar-visible' : ''}`}>
+    <div className={`app ${isSidebarVisible ? "sidebar-visible" : ""}`}>
       {/* Sidebar */}
       <div className="sidebar">
+        <h1>Sidebar</h1>
+      </div>
+
+      <div className="main-content">
+        <h1>Welcome to My React App</h1>
         <button className="toggle-button" onClick={toggleSidebar}>
           Toggle Sidebar
         </button>
-      </div>
-
-      {/* Main content */}
-      <div className="main-content">
-        <h1>Welcome to My React App</h1>
-        <textarea rows="4" cols="50" placeholder="Enter your text here"></textarea>
+        <textarea
+          rows="4"
+          cols="50"
+          placeholder="Enter your text here"
+        ></textarea>
       </div>
     </div>
   );
