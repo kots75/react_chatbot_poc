@@ -16,14 +16,14 @@ function App() {
       </div>
 
       <div className="main-content">
-        <h1>Welcome to My React App</h1>
+        <h1>React Chatbot POC</h1>
         <button className="toggle-button" onClick={toggleSidebar}>
           Toggle Sidebar
         </button>
         <textarea
           rows="4"
           cols="50"
-          placeholder="Enter your text here"
+          placeholder="This is a pretend editor"
         ></textarea>
       </div>
     </div>
